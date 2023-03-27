@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_row(form.title) }}
+    <hr />
+    {{ form_row(form.content) }}
+
+    {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+
+    {% include 'post/_list.html.twig' with { 'items' : posts, 'inputName' : 'toto' } %}
+{% endblock %}
